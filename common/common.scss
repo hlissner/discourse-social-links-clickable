@@ -1,26 +1,13 @@
- .iconic-user-fields {
+.iconic-user-fields {
+  margin-left: 1px;
   a {
-      margin-right: 5px;
+      margin-right: 2px;
   }
   .fa {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #{$icon-color};
-  }
-  .fa.d-icon.svg-icon.svg-string {
-      margin-left: 0px;
-  }
-}
-
-
-#user-card {
-  .card-content {
-      padding-top: 31px;
-  }
-  .usercard-controls {
-      margin-top: -19px;
-  }
-  &.no-bg .card-content {
-      padding-top: 12px;
-      margin-top: 19px;
+      &:hover {
+        color: var(--tertiary);
+      }
   }
 }

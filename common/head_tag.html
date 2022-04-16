@@ -23,12 +23,12 @@
         component.set(name, links);
     }
 
-    api.registerConnectorClass('user-post-names', 'user-card-profile-customization', {
+    api.registerConnectorClass('user-location-and-website', 'user-card-profile-customization', {
         setupComponent(args, component) {
             parseFieldOptions(component, 'userIconicUserFields')
         }
     });
-    api.registerConnectorClass('user-card-post-names', 'user-card-profile-customization', {
+    api.registerConnectorClass('user-card-location-and-website', 'user-card-profile-customization', {
         setupComponent(args, component) {
             parseFieldOptions(component, 'iconicUserFields')
         }
@@ -39,27 +39,27 @@
     });
 </script>
 
-<script type='text/x-handlebars' data-template-name='/connectors/user-post-names/user-card-profile-customization'>
-    {{#if userIconicUserFields}}
+<script type='text/x-handlebars' data-template-name='/connectors/user-location-and-website/user-card-profile-customization'>
+  {{#if userIconicUserFields}}
     <div class="iconic-user-fields">
-        {{#each userIconicUserFields as |ic|}}
+      {{#each userIconicUserFields as |ic|}}
         {{#if ic.icon}}
-        <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}">{{d-icon ic.icon}}</a>
+          <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}">{{d-icon ic.icon}}</a>
         {{/if}}
-        {{/each}}
+      {{/each}}
     </div>
-    {{/if}}
+  {{/if}}
 </script>
 
 
-<script type='text/x-handlebars' data-template-name='/connectors/user-card-post-names/user-card-profile-customization'>
-    {{#if iconicUserFields}}
-    <div class="iconic-user-fields">
-        {{#each iconicUserFields as |ic|}}
-        {{#if ic.icon}}
+<script type='text/x-handlebars' data-template-name='/connectors/user-card-location-and-website/user-card-profile-customization'>
+  {{#if iconicUserFields}}
+  <div class="iconic-user-fields">
+    {{#each iconicUserFields as |ic|}}
+      {{#if ic.icon}}
         <a href="{{ic.href}}" rel="nofollow" target="_blank" title="{{ic.name}}">{{d-icon ic.icon}}</a>
-        {{/if}}
-        {{/each}}
-    </div>
-    {{/if}}
+      {{/if}}
+    {{/each}}
+  </div>
+  {{/if}}
 </script>
