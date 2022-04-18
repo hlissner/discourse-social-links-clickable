@@ -1,6 +1,6 @@
 <script type="text/discourse-plugin" version="0.8.7">
     function getLinks (userFields, siteFields) {
-        return settings
+        return !userFields ? [] : settings
             .social_links
             .split('|')
             .map(link => {
